@@ -1,7 +1,7 @@
 abstract class Money {
     protected int amount;
+    protected String currency;
     abstract Money times(int multiplier);
-    abstract String currency();
 
     static Money dollar (int amount){
         return new Dollar(amount);
@@ -11,6 +11,9 @@ abstract class Money {
         return new Franc(amount);
     }
 
+    String currency(){
+        return currency;
+    }
     public boolean equals(Object object){
         Money money = (Money) object;
         return amount == money.amount && this.getClass().equals(money.getClass());
