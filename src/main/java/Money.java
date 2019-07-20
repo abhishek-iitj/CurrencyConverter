@@ -23,4 +23,7 @@ public class Money {
         Money money = (Money) object;
         return amount == money.amount && this.currency().equals(money.currency());
     }
+    Money plus(Money addend){
+        return new Money(this.amount + addend.amount, this.currency);
+    }
 }
