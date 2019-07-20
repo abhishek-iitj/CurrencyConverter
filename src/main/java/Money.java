@@ -4,7 +4,7 @@ abstract class Money {
     abstract Money times(int multiplier);
 
     static Money dollar (int amount){
-        return new Dollar(amount);
+        return new Dollar(amount, "USD");
     }
 
     static Money franc (int amount){
