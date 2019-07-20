@@ -2,7 +2,7 @@ public class Money {
     protected int amount;
     protected String currency;
     Money times(int multiplier){
-        return null;
+        return new Money(amount * multiplier, currency);
     }
     Money(int amount, String currency){
         this.amount = amount;
@@ -19,7 +19,7 @@ public class Money {
     String currency(){
         return currency;
     }
-    public boolean equals(Object object){
+    public boolean equals(Object object) {
         Money money = (Money) object;
         return amount == money.amount && this.currency().equals(money.currency());
     }
