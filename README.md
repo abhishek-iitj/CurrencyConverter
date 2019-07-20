@@ -1,4 +1,4 @@
-# Currency Converter
+# Currency Converter [![Build Status](https://travis-ci.org/abhishek-iitj/CurrencyConverter.svg?branch=master)](https://travis-ci.org/abhishek-iitj/CurrencyConverter)
 
 This is a walk through of the book Kent Beck TDD By Example
 
