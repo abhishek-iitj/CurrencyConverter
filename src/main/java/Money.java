@@ -1,4 +1,4 @@
-public class Money {
+public class Money implements MoneyExpression {
     protected int amount;
     protected String currency;
     Money times(int multiplier){
@@ -23,7 +23,7 @@ public class Money {
         Money money = (Money) object;
         return amount == money.amount && this.currency().equals(money.currency());
     }
-    Money plus(Money addend){
+    MoneyExpression plus(Money addend){
         return new Money(this.amount + addend.amount, this.currency);
     }
 }
