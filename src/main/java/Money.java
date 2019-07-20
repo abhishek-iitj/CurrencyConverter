@@ -9,11 +9,11 @@ public class Money {
         this.currency = currency;
     }
     static Money dollar (int amount){
-        return new Dollar(amount, "USD");
+        return new Money(amount, "USD");
     }
 
     static Money franc (int amount){
-        return new Franc(amount, "CHF");
+        return new Money(amount, "CHF");
     }
 
     String currency(){
