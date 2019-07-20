@@ -24,6 +24,6 @@ public class Money implements MoneyExpression {
         return amount == money.amount && this.currency().equals(money.currency());
     }
     MoneyExpression plus(Money addend){
-        return new Money(this.amount + addend.amount, this.currency);
+        return new Sum(this, addend);
     }
 }

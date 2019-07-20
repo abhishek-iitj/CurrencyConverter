@@ -43,4 +43,13 @@ public class MultiplicationTest {
         Money reduced = bank.reduce(sum, "USD");
         Assert.assertEquals(Money.dollar(10), reduced);
     }
+
+    @Test
+    public void testPlusReturnsSum(){
+        Money five = Money.dollar(5);
+        MoneyExpression result = five.plus(five);
+        Sum sum = (Sum) result;
+        Assert.assertEquals(five, sum.augend);
+        Assert.assertEquals(five, sum.addend);
+    }
 }
