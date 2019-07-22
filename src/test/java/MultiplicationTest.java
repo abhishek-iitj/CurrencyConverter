@@ -52,4 +52,12 @@ public class MultiplicationTest {
         Assert.assertEquals(five, sum.augend);
         Assert.assertEquals(five, sum.addend);
     }
+
+    @Test
+    public void testReduceSum() {
+        MoneyExpression sum = new Sum(Money.dollar(3), Money.dollar(4));
+        Bank bank = new Bank();
+        Money result = bank.reduce(sum, "USD");
+        Assert.assertEquals(Money.dollar(7), result);
+    }
 }
